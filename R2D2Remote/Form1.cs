@@ -5,9 +5,13 @@ namespace R2D2Remote
 {
     public partial class Form1 : Form
     {
+        private R2D2Networking robotCom;
         public Form1()
         {
+
             InitializeComponent();
+            robotCom = new R2D2Networking("R2D2.local");
+            robotCom.Start();
         }
 
         delegate void SetTextCallback(float value);
@@ -25,6 +29,7 @@ namespace R2D2Remote
             }
             else
             {
+                robotCom.SendValue(R2D2Networking.ValueType.throttle,f);
                 trackBar1.Value = (int)(f * 100);
             }
         }

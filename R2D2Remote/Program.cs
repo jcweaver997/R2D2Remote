@@ -19,7 +19,6 @@ namespace R2D2Remote
             ControlInterface controls = new KeyboardControl();
             controls.SetThrottle = f.SetThrottle;
             controls.Init();
-
             Application.Run(f);
  
 
