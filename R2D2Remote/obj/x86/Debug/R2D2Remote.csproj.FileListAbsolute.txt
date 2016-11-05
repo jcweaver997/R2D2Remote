@@ -1,0 +1,22 @@
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\bin\x86\Debug\R2D2Remote.exe.config
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\bin\x86\Debug\R2D2Remote.exe
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\bin\x86\Debug\R2D2Remote.pdb
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\bin\x86\Debug\Gma.UserActivityMonitor.dll
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\bin\x86\Debug\Gma.UserActivityMonitor.pdb
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.Form1.resources
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.Properties.Resources.resources
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.csproj.GenerateResource.Cache
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.exe
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.pdb
+c:\users\jcwea\onedrive\documents\visual studio 2015\Projects\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.csprojResolveAssemblyReference.cache
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\R2D2Remote.exe.config
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.exe
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.pdb
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.csprojResolveAssemblyReference.cache
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.Form1.resources
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.Properties.Resources.resources
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.csproj.GenerateResource.Cache
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\R2D2Remote.exe
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\R2D2Remote.pdb
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\Gma.UserActivityMonitor.dll
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\Gma.UserActivityMonitor.pdb
