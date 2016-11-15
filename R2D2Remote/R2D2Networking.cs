@@ -75,7 +75,6 @@ namespace R2D2Remote
             byte[] values = BitConverter.GetBytes(v);
             values.CopyTo(packet, 1);
             com.Write(packet,0,5);
-            Console.WriteLine("sent 5");
         }
 
         public ReturnValueType RecvValue()
