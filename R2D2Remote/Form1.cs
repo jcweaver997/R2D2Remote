@@ -8,41 +8,44 @@ namespace R2D2Remote
     {
         private R2D2Networking robotCom;
         private float throttle = 0;
+        private float turn = 0;
+        delegate void ShowValueDelegate(TrackBar t, float value);
+        private ShowValueDelegate showValue;
         public Form1()
         {
 
+
             InitializeComponent();
-            robotCom = new R2D2Networking("R2D2.local");
-            robotCom.Start();
             new Thread(() =>
             {
-                for (;;)
+                robotCom = new R2D2Networking("R2D2.local");
+                robotCom.Start();
+                while (Visible)
                 {
                     robotCom.SendValue(R2D2Networking.ValueType.throttle, throttle);
-                    Thread.Sleep(10);
+                    showValue = new ShowValueDelegate(ShowValue);
+                    this.Invoke(showValue, new object[] {trackBar1, throttle });
+                    robotCom.SendValue(R2D2Networking.ValueType.turn, turn);
+                    showValue = new ShowValueDelegate(ShowValue);
+                    this.Invoke(showValue, new object[] {trackBar2,  turn });
+                    Thread.Sleep(50);
                 }
 
             }).Start();
         }
 
-        delegate void SetTextCallback(float value);
+
+        public void ShowValue(TrackBar t, float value)
+        {
+            t.Value = (int)(value*100);
+        }
         public void SetThrottle(float f)
         {
             throttle = f;
-            if (this.trackBar1.InvokeRequired)
-            {
-                try
-                {
-                    SetTextCallback d = new SetTextCallback(SetThrottle);
-                    this.Invoke(d, new object[] { f });
-                }
-                catch (Exception) { }
-
-            }
-            else
-            {
-                trackBar1.Value = (int)(f * 100);
-            }
+        }
+        public void SetTurn(float f)
+        {
+            turn = f;
         }
     }
 }

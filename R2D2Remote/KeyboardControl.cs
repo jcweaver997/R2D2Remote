@@ -1,4 +1,5 @@
-﻿using Gma.UserActivityMonitor;
+﻿
+using Gma.System.MouseKeyHook;
 using System;
 using System.Windows.Forms;
 
@@ -7,8 +8,10 @@ namespace R2D2Remote
     class KeyboardControl : ControlInterface
     {
         float[] controls = new float[2];
+        IKeyboardMouseEvents HookManager;
         public override void Init()
         {
+            HookManager = Hook.GlobalEvents();
             Console.WriteLine("starting up");
             HookManager.KeyDown += new KeyEventHandler(KeyDown);
             HookManager.KeyUp += new KeyEventHandler(KeyUp);
@@ -21,7 +24,7 @@ namespace R2D2Remote
 
         public override float GetTurn()
         {
-            throw new NotImplementedException();
+            return controls[1];
         }
 
         private void KeyDown(Object s, KeyEventArgs a)
@@ -42,6 +45,7 @@ namespace R2D2Remote
                     break;
             }
             SetThrottle(GetThrottle());
+            SetTurn(GetTurn());
         }
         private void KeyUp(Object s, KeyEventArgs a)
         {
@@ -61,6 +65,7 @@ namespace R2D2Remote
                     break;
             }
             SetThrottle(GetThrottle());
+            SetTurn(GetTurn());
         }
     }
 }

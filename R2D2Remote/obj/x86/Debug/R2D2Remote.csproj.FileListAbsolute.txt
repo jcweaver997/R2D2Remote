@@ -18,5 +18,4 @@ C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D
 C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Debug\R2D2Remote.csproj.GenerateResource.Cache
 C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\R2D2Remote.exe
 C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\R2D2Remote.pdb
-C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\Gma.UserActivityMonitor.dll
-C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\Gma.UserActivityMonitor.pdb
+C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Debug\Gma.System.MouseKeyHook.dll
