@@ -22,7 +22,7 @@ namespace R2D2Remote
                 robotCom.Start();
                 while (Visible)
                 {
-                    robotCom.SendValue(R2D2Networking.ValueType.throttle, throttle);
+                    robotCom.SendValue(R2D2Networking.ValueType.throttle, throttle*.5f);
                     showValue = new ShowValueDelegate(ShowValue);
                     this.Invoke(showValue, new object[] {trackBar1, throttle });
                     robotCom.SendValue(R2D2Networking.ValueType.turn, turn);

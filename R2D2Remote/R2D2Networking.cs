@@ -132,7 +132,7 @@ namespace R2D2Remote
                     b = client.Receive(ref remote);
                     btimeout = false;
                 }
-                catch (Exception) { Console.WriteLine("Couldnt rec"); }
+                catch (SocketException e) { Console.WriteLine("Couldnt rec error code "+ e.ErrorCode); continue; }
                 if (b.Length != 5)
                 {
                     Console.WriteLine("ERROR: Packet format wrong!");
