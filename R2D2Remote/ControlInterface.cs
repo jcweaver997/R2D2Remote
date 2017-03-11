@@ -1,12 +1,14 @@
-﻿namespace R2D2Remote
+﻿using System.Windows.Forms;
+
+namespace R2D2Remote
 {
-    abstract class ControlInterface
+    public abstract class ControlInterface
     {
-        public delegate void SetValue(float value);
-        public SetValue SetThrottle;
-        public SetValue SetTurn;
-        public abstract void Init();
+        public delegate void SetValueDelegate(int id, float value);
+        public SetValueDelegate SetValue;
+        public abstract void Init(Form f);
         public abstract float GetThrottle();
         public abstract float GetTurn();
+        public abstract void ReadInput();
     }
 }

@@ -14,12 +14,11 @@ namespace R2D2Remote
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form1 f = new Form1();
-
             ControlInterface controls = new KeyboardControl();
-            controls.SetThrottle = f.SetThrottle;
-            controls.SetTurn = f.SetTurn;
-            controls.Init();
+
+            Form1 f = new Form1(controls);
+
+
             Application.Run(f);
  
 

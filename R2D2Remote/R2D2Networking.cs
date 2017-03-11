@@ -68,7 +68,7 @@ namespace R2D2Remote
                             }
                         }
                     }
-                    catch (Exception) { Console.WriteLine("Couldnt find the robot on the network, trying again"); Start(); return; }
+                    catch (Exception) { Console.WriteLine("Couldnt find the robot on the network, trying again"); Thread.Sleep(1000);  Start(); return; }
 
                     client = new UdpClient();
                     receivedMessages = new ConcurrentQueue<ReturnValueType>();
@@ -124,6 +124,7 @@ namespace R2D2Remote
 
         private void Receive()
         {
+            Thread.Sleep(3000);
             while (connected)
             {
                 byte[] b = new byte[5];

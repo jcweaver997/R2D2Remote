@@ -9,8 +9,10 @@ namespace R2D2Remote
     {
         float[] controls = new float[2];
         IKeyboardMouseEvents HookManager;
-        public override void Init()
+        Form f;
+        public override void Init(Form f)
         {
+            this.f = f;
             HookManager = Hook.GlobalEvents();
             Console.WriteLine("starting up");
             HookManager.KeyDown += new KeyEventHandler(KeyDown);
@@ -44,8 +46,11 @@ namespace R2D2Remote
                     controls[1] = 1;
                     break;
             }
-            SetThrottle(GetThrottle());
-            SetTurn(GetTurn());
+            
+            SetValue((int)R2D2Networking.ValueType.throttle,GetThrottle());
+            SetValue((int)R2D2Networking.ValueType.turn,GetTurn());
+            f.Invoke(SetValue, new Object[] { (int)R2D2Networking.ValueType.throttle, GetThrottle() });
+            f.Invoke(SetValue, new Object[] { (int)R2D2Networking.ValueType.turn, GetTurn() });
         }
         private void KeyUp(Object s, KeyEventArgs a)
         {
@@ -64,8 +69,15 @@ namespace R2D2Remote
                     controls[1] = 0;
                     break;
             }
-            SetThrottle(GetThrottle());
-            SetTurn(GetTurn());
+            SetValue((int)R2D2Networking.ValueType.throttle, GetThrottle());
+            SetValue((int)R2D2Networking.ValueType.turn, GetTurn());
+            f.Invoke(SetValue, new Object[] { (int)R2D2Networking.ValueType.throttle, GetThrottle() });
+            f.Invoke(SetValue, new Object[] { (int)R2D2Networking.ValueType.turn, GetTurn() });
+        }
+
+        public override void ReadInput()
+        {
+            
         }
     }
 }
