@@ -5,28 +5,21 @@ using System.Windows.Forms;
 
 namespace R2D2Remote
 {
-    class KeyboardControl : ControlInterface
+    class KeyboardControl
     {
-        float[] controls = new float[2];
-        IKeyboardMouseEvents HookManager;
-        Form f;
-        public override void Init(Form f)
+        private float[] controls = new float[2];
+        private IKeyboardMouseEvents HookManager;
+        private Form form;
+        public delegate void SetValue(int id, float val);
+        private SetValue setValue;
+        public void Init(Form form, SetValue setValue)
         {
-            this.f = f;
+            this.form = form;
+            this.setValue = setValue;
             HookManager = Hook.GlobalEvents();
             Console.WriteLine("starting up");
             HookManager.KeyDown += new KeyEventHandler(KeyDown);
             HookManager.KeyUp += new KeyEventHandler(KeyUp);
-        }
-
-        public override float GetThrottle()
-        {
-            return controls[0];
-        }
-
-        public override float GetTurn()
-        {
-            return controls[1];
         }
 
         private void KeyDown(Object s, KeyEventArgs a)
@@ -46,11 +39,11 @@ namespace R2D2Remote
                     controls[1] = 1;
                     break;
             }
-            
-            SetValue((int)R2D2Networking.ValueType.throttle,GetThrottle());
-            SetValue((int)R2D2Networking.ValueType.turn,GetTurn());
-            f.Invoke(SetValue, new Object[] { (int)R2D2Networking.ValueType.throttle, GetThrottle() });
-            f.Invoke(SetValue, new Object[] { (int)R2D2Networking.ValueType.turn, GetTurn() });
+
+            //setValue(0, controls[0]);
+            //setValue(1, controls[1]);
+            form.Invoke(setValue, new Object[] { 0, controls[0] });
+            form.Invoke(setValue, new Object[] { 1, controls[1] });
         }
         private void KeyUp(Object s, KeyEventArgs a)
         {
@@ -69,15 +62,8 @@ namespace R2D2Remote
                     controls[1] = 0;
                     break;
             }
-            SetValue((int)R2D2Networking.ValueType.throttle, GetThrottle());
-            SetValue((int)R2D2Networking.ValueType.turn, GetTurn());
-            f.Invoke(SetValue, new Object[] { (int)R2D2Networking.ValueType.throttle, GetThrottle() });
-            f.Invoke(SetValue, new Object[] { (int)R2D2Networking.ValueType.turn, GetTurn() });
-        }
-
-        public override void ReadInput()
-        {
-            
+            form.Invoke(setValue, new Object[] { 0, controls[0] });
+            form.Invoke(setValue, new Object[] { 1, controls[1] });
         }
     }
 }

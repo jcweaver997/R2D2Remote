@@ -8,3 +8,14 @@ C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R
 C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.csproj.GenerateResource.Cache
 C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.exe
 C:\Users\jcwea\OneDrive\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.pdb
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Release\R2D2Remote.exe.config
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Release\R2D2Remote.exe
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Release\R2D2Remote.pdb
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\bin\x86\Release\Gma.System.MouseKeyHook.dll
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.csprojResolveAssemblyReference.cache
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.Form1.resources
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.Properties.Resources.resources
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.csproj.GenerateResource.Cache
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.csproj.CoreCompileInputs.cache
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.exe
+C:\Users\Robotics\Documents\GitHub\R2D2Remote\R2D2Remote\obj\x86\Release\R2D2Remote.pdb

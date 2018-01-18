@@ -14,9 +14,8 @@ namespace R2D2Remote
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ControlInterface controls = new KeyboardControl();
 
-            Form1 f = new Form1(controls);
+            Form1 f = new Form1();
 
 
             Application.Run(f);
