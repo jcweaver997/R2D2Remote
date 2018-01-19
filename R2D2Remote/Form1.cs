@@ -32,9 +32,9 @@ namespace R2D2Remote
                     Thread.Sleep(50);
                     try // Needed for when the window closes
                     {
-
-                        robotCom.SendCommand(new R2D2Connection.Command(R2D2Connection.Commands.SetLeftDriveMotor, BitConverter.GetBytes(values[0])));
-                        robotCom.SendCommand(new R2D2Connection.Command(R2D2Connection.Commands.SetRightDriveMotor, BitConverter.GetBytes(values[1])));
+                        float[] gtaval = TranslateValuesToGTA(values[0], values[1]);
+                        robotCom.SendCommand(new R2D2Connection.Command(R2D2Connection.Commands.SetLeftDriveMotor, BitConverter.GetBytes(gtaval[0])));
+                        robotCom.SendCommand(new R2D2Connection.Command(R2D2Connection.Commands.SetRightDriveMotor, BitConverter.GetBytes(gtaval[1])));
 
                         this.Invoke(showValue, new object[] { trackBar1, values[0] });
                         this.Invoke(showValue, new object[] { trackBar2, values[1] });
@@ -48,6 +48,47 @@ namespace R2D2Remote
                 }
 
             }).Start();
+        }
+
+        private float[] TranslateValuesToGTA(float throttle, float turn)
+        {
+            float[] ar = new float[2];
+            if (throttle>.5f)
+            {
+                ar[0] = throttle;
+                ar[1] = throttle;
+                if (turn>0)
+                {
+                    ar[1] -= turn * 1.5f;
+                }
+                else
+                {
+                    ar[0] -= turn * 1.5f;
+                }
+
+            }
+            else if (throttle < -.5f)
+            {
+                ar[0] = throttle;
+                ar[1] = throttle;
+                if (turn > 0)
+                {
+                    ar[1] += turn * 1.5f;
+                }
+                else
+                {
+                    ar[0] += turn * 1.5f;
+                }
+
+            }
+            else
+            {
+                ar[0] = throttle;
+                ar[1] = throttle;
+                ar[0] += turn * 1f;
+                ar[1] -= turn * 1f;
+            }
+            return ar;
         }
 
 
